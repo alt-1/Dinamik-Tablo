@@ -1,0 +1,39 @@
+﻿@using EntityLayer.Concrete
+@model List<Header>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Table View</title>
+</head>
+<body>
+    <br />
+    <h2>Table View</h2>
+    <br />
+    <div>
+        <button class="btn btn-success">New</button>
+        <table class="table table-bordered" style="margin-left:15px; margin-right:15px">
+
+            <tr>
+                <th>Commands</th>
+                <th>ID</th>
+                @foreach (var item in Model)
+                {
+                    <th>
+                        @item.HeaderName
+                    </th>
+                }
+            </tr>
+           
+
+
+        </table>
+    </div>
+</body>
+</html>

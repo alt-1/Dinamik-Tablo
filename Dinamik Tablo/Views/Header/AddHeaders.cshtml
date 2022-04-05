@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.Header
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Table Design</title>
+</head>
+<body>
+    <h2 style="margin-left:15px">Table Design</h2>
+    <br />
+    <div>
+
+            @using (Html.BeginForm("AddHeaders", "Header", FormMethod.Post))
+            {
+                <div class="form-group">
+
+                    <button class="btn btn-success" style="margin-left:15px">Add</button>
+                    @Html.TextBoxFor(x => x.HeaderName, new { @placeholder = "New Column" })
+                </div>
+            }
+        </div>
+
+</body>
+</html>

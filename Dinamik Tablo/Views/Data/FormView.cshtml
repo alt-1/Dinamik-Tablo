@@ -1,0 +1,31 @@
+﻿@model EntityLayer.Concrete.Data
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Table Design</title>
+</head>
+<body>
+    <h2 style="margin-left:15px">Table Design</h2>
+    <br />
+
+    @using (Html.BeginForm("FormView", "Data", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.HiddenFor(x => x.HeaderID)
+            @Html.HiddenFor(x => x.Id)
+            @Html.TextBoxFor(x => x.Name)
+            <button class="btn btn-success">Save</button>
+
+        </div>
+
+    }
+</body>
+</html>
